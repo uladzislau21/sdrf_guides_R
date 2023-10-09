@@ -31,3 +31,6 @@ General table manipulation operations include:
 - changing value(s) in particular cell(s).
 
 ### Add columns/rows
+
+## Links
+- [tidyverse package](https://www.tidyverse.org/)
