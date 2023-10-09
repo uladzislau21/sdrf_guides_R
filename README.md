@@ -22,3 +22,12 @@ There are several ways to load your SDRF file into R:
     library(tidyverse)
     sdrf <- read_tsv(file = 'path/to/sdrf_file.sdrf.tsv')
     ```
+
+## Process file
+
+General table manipulation operations include:
+- column(s)/row(s) addition/removal,
+- renaming of column(s),
+- changing value(s) in particular cell(s).
+
+### Add columns/rows
