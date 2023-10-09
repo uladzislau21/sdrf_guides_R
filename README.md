@@ -13,6 +13,7 @@ There are several ways to load your SDRF file into R:
 
     `check.names` set to F (FALSE) allows R to read column names as they in original file (contain [])
 
+
 - utilizing function **read_tsv()** from `tidyverse` package
     
     This method is preferred since this function reads SDRF file correctly with just providing a file path. Moreover, `tidyverse` package will be used in the following file processing.
