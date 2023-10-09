@@ -1,2 +1,6 @@
-# sdrf_guides_R
-The repository describes how to manipulate SDRF file with R code
+# How to work with SDRF in R
+
+## Load SDRF into R environment
+
+There are several ways to load your SDRF file into R:
+- utilizing base function **read.table()**
