@@ -62,7 +62,7 @@ sdrf <- sdrf %>%
   More columns can be listed through comma.
 
 ### Changing value in particular cell
-The following command will change a value in 3rd row of `comment[depletion]` column to `non-depleted`:
+- The following command will change a value in 3rd row of `comment[depletion]` column to `non-depleted`:
     ```
     sdrf[3, 'comment[depletion]'] <- 'non-depleted'
     ```
