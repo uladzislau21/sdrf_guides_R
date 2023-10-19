@@ -31,6 +31,12 @@ General table manipulation operations include:
 - changing value(s) in particular cell(s).
 
 ### Add columns/rows
+- To add **columns** to the SDRF we can use `mutate` function:
+```
+sdrf <- sdrf %>%
+  mutate(`comment[number of missed cleavages]` = 2)
+```
+`%>%` allows to pass the result of previous function execution to the next one (take dataset sdrf and add column with the name comment[number of missed cleavages])
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
