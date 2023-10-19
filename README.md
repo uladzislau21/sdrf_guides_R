@@ -51,7 +51,7 @@ sdrf <- sdrf %>%
 - Columns can be renamed with `rename` function:
   ```
   sdrf <- sdrf %>%
-  rename(`comment[missed cleavages]` = `comment[number of missed cleavages]`)
+      rename(`comment[missed cleavages]` = `comment[number of missed cleavages]`)
   ```
   `rename` takes arguments in the following format: new_name = old_name
 
