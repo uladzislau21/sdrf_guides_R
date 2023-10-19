@@ -28,7 +28,11 @@ There are several ways to load your SDRF file into R:
 General table manipulation operations include:
 - column(s) addition/removal,
 - renaming of column(s),
-- changing value(s) in particular cell(s).
+- changing value in particular cell.
+
+Advanced programming includes:
+- creation of number sequences,
+- strings' manipulation.
 
 ### Add columns/rows
 - To add **columns** to the SDRF we can use `mutate` function:
@@ -56,6 +60,13 @@ sdrf <- sdrf %>%
   `rename` takes arguments in the following format: new_name = old_name
 
   More columns can be listed through comma.
+
+### Changing value in particular cell
+The following command will change a value in 3rd row of `comment[depletion]` column to `non-depleted`:
+    ```
+    sdrf[3, 'comment[depletion]'] <- 'non-depleted'
+    ```
+    While subsetting a dataframe first the number of row is indicated, then the name of the column (it can be indicated with number also, but not advised since the order of columns can be changed later)
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
