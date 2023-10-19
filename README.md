@@ -26,7 +26,7 @@ There are several ways to load your SDRF file into R:
 ## Process file
 
 General table manipulation operations include:
-- column(s)/row(s) addition/removal,
+- column(s) addition/removal,
 - renaming of column(s),
 - changing value(s) in particular cell(s).
 
@@ -40,11 +40,14 @@ General table manipulation operations include:
 
     `mutate` function creates or updates columns, indicate the name of the column (enclose with `` if it contains spaces) and data (data can be a single value that will be recycled to length of n, or vector, where n is the number of rows)
 
+  More columns can be indicated throucgh comma.
+
 - The following command will remove the column from the dataset:
 ```
 sdrf <- sdrf %>%
   mutate(`comment[number of missed cleavages]` = NULL)
 ```
+### Renaming of column(s)
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
