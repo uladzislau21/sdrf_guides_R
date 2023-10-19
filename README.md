@@ -76,6 +76,12 @@ sdrf <- sdrf %>%
       mutate(`comment[fractionation method]` = 'high pH fractionation') %>%
       rename(`characteristics[disease]` = `characteristics[pathology]`)
   ```
+### Creation of number sequences
+- The following code creates a vector for column `comment[fraction identifier]` (raw files' names should be in the same order):
+  ```
+  fractions <- rep(c(1, 2, 3), each = 10)
+  # output [1] 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3
+  ```
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
