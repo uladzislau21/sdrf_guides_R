@@ -68,5 +68,14 @@ sdrf <- sdrf %>%
     ```
     While subsetting a dataframe first the number of row is indicated, then the name of the column (it can be indicated with number also, but not advised since the order of columns can be changed later)
 
+### Creating a pipeline
+- `%>%` allows to link several functions together:
+  ```
+  # add a column comment[fractionation method] and rename column characteristics[pathology] to characteristics[disease]
+  sdrd <- sdrf %>%
+      mutate(`comment[fractionation method]` = 'high pH fractionation') %>%
+      rename(`characteristics[disease]` = `characteristics[pathology]`)
+  ```
+
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
