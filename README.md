@@ -32,6 +32,7 @@ General table manipulation operations include:
 
 Advanced programming includes:
 - creation of number sequences,
+- getting MS raw file names from the folder,
 - strings' manipulation.
 
 ### Add columns/rows
@@ -86,7 +87,20 @@ sdrf <- sdrf %>%
   sdrf <- sdrf %>%
       mutate(`comment[fraction identifier]` = fractions)
   ```
+  
   This command is also useful for `comment[technical replicate]` column.
+
+### Getting MS raw file names from the folder
+- The following command will take all file names in the path `path/to/ms/files` with extension `.raw` and put them in a vector:
+  ```
+  ms_files <- list.files(list.files(path = 'path/to/ms/files/', pattern = '.raw')
+
+  # fill comment[data file] column
+  sdrf <- sdrf %>%
+      mutate(comment[data file] = ms_files)
+  ```
+
+  Make sure to locate only necessary files in the path. Extension of the files can be changed with `pattern` parameter.
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
