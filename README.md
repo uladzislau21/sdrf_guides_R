@@ -79,8 +79,12 @@ sdrf <- sdrf %>%
 ### Creation of number sequences
 - The following code creates a vector for column `comment[fraction identifier]` (raw files' names should be in the same order):
   ```
-  fractions <- rep(c(1, 2, 3), each = 10)
+  fractions <- rep(c(1, 2, 3), each = 10) # first 10 files are from the first fraction and so on
   # output [1] 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3
+
+  # update or create a column with fractions identifiers
+  sdrf <- sdrf %>%
+      mutate(`comment[fraction identifier]` = fractions)
   ```
 
 ## Links
