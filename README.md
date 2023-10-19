@@ -37,6 +37,13 @@ sdrf <- sdrf %>%
   mutate(`comment[number of missed cleavages]` = 2)
 ```
 `%>%` allows to pass the result of previous function execution to the next one (take dataset sdrf and add column with the name comment[number of missed cleavages])
+`mutate` function creates or updates columns, indicate the name of column (enclose the name with `` if it contains spaces) and data to put in the column
+
+- The following command will remove the column from the dataset:
+```
+sdrf <- sdrf %>%
+  mutate(`comment[number of missed cleavages]` = NULL)
+```
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
