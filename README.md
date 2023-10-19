@@ -40,7 +40,7 @@ General table manipulation operations include:
 
     `mutate` function creates or updates columns, indicate the name of the column (enclose with `` if it contains spaces) and data (data can be a single value that will be recycled to length of n, or vector, where n is the number of rows)
 
-  More columns can be indicated throucgh comma.
+  More columns can be indicated through comma.
 
 - The following command will remove the column from the dataset:
 ```
@@ -48,6 +48,14 @@ sdrf <- sdrf %>%
   mutate(`comment[number of missed cleavages]` = NULL)
 ```
 ### Renaming of column(s)
+- Columns can be renamed with `rename` function:
+  ```
+  sdrf <- sdrf %>%
+  rename(`comment[missed cleavages]` = `comment[number of missed cleavages]`)
+  ```
+  `rename` takes arguments in the following format: new_name = old_name
+
+  More columns can be listed through comma.
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
