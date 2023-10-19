@@ -86,6 +86,7 @@ sdrf <- sdrf %>%
   sdrf <- sdrf %>%
       mutate(`comment[fraction identifier]` = fractions)
   ```
+  This command is also useful for `comment[technical replicate]` column.
 
 ## Links
 - [tidyverse package](https://www.tidyverse.org/)
